@@ -134,5 +134,11 @@
 ## Vercel Deployment Fix - Use client/public
 
 - [x] Update vercel.json output directory to client/public
-- [ ] Push fix to GitHub
+- [x] Push fix to GitHub
 - [ ] Verify Vercel deployment succeeds
+
+## Update Profile Image to profile.jpg
+
+- [x] Update Home.tsx to use profile.jpg
+- [x] Test image display
+- [ ] Push to GitHub

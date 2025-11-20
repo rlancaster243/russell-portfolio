@@ -268,7 +268,7 @@ export default function Home() {
             <div className="relative">
               <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-primary shadow-2xl">
                 <img 
-                  src="/profile-centered.png" 
+                  src="/profile.jpg" 
                   alt="Russell Lancaster" 
                   className="w-full h-full object-cover object-center"
                 />
