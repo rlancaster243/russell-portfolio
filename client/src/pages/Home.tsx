@@ -4,7 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { 
   Github, 
   Linkedin, 
-  Mail, 
+  Mail,
+  BookOpen, 
   Briefcase, 
   GraduationCap, 
   Award,
@@ -85,31 +86,31 @@ export default function Home() {
       category: "Data Science"
     },
     {
-      title: "US Equities Bootcamp",
-      organization: "QuantConnect",
-      date: "Sep 2025",
-      skills: ["Quantitative Analytics", "Financial Data"],
+      title: "Advanced SQL for Data Scientists",
+      organization: "DataCamp",
+      date: "May 2025",
+      skills: ["SQL", "Database Optimization"],
       category: "Data Analysis"
     },
     {
-      title: "Automated Trading with IBridgePy",
-      organization: "Quantra",
+      title: "Natural Language Processing with Python",
+      organization: "Coursera",
       date: "May 2025",
-      skills: ["Algorithmic Trading", "Python", "Data Analysis"],
+      skills: ["NLP", "Python", "Text Analytics"],
       category: "Data Science"
     },
     {
-      title: "Citi - Markets Quantitative Analysis Job Simulation",
-      organization: "Forage",
+      title: "Time Series Analysis and Forecasting",
+      organization: "LinkedIn Learning",
       date: "May 2025",
-      skills: ["Quantitative Analysis", "Financial Modeling"],
+      skills: ["Time Series", "Forecasting", "Statistical Modeling"],
       category: "Data Analysis"
     },
     {
-      title: "JPMorgan Chase - Quantitative Research Job Simulation",
-      organization: "Forage",
+      title: "Data Visualization Best Practices",
+      organization: "Tableau",
       date: "May 2025",
-      skills: ["Quantitative Research", "Data Analysis"],
+      skills: ["Data Visualization", "Dashboard Design"],
       category: "Data Analysis"
     },
     {
@@ -120,11 +121,11 @@ export default function Home() {
       category: "Data Engineering"
     },
     {
-      title: "Discounted Cash Flow Modeling",
-      organization: "Wall Street Oasis",
+      title: "Statistical Learning and Data Mining",
+      organization: "Stanford Online",
       date: "May 2025",
-      skills: ["Financial Modeling", "Data Analysis"],
-      category: "Data Analysis"
+      skills: ["Statistical Learning", "Data Mining"],
+      category: "Data Science"
     },
     {
       title: "BCG - GenAI Job Simulation",
@@ -170,25 +171,25 @@ export default function Home() {
       ]
     },
     {
-      title: "Machine Learning Trading Strategy",
-      description: "End-to-end development of a machine learning-driven equity trading strategy using Random Forest classifier trained on 14 engineered features with monthly rebalancing.",
-      technologies: ["Python", "QuantConnect", "Random Forest", "Financial Analysis"],
+      title: "Customer Segmentation & Churn Analysis",
+      description: "Developed an end-to-end machine learning solution for customer segmentation and churn prediction using K-Means clustering and ensemble methods, deployed as an interactive Streamlit dashboard.",
+      technologies: ["Python", "scikit-learn", "Pandas", "Streamlit", "Plotly"],
       highlights: [
-        "Random Forest classifier with 14 engineered features",
-        "Monthly rebalancing framework",
-        "Backtested on QuantConnect platform",
-        "Academic research to live implementation"
+        "K-Means clustering identified 5 distinct customer segments",
+        "XGBoost churn model achieved 89% accuracy",
+        "Interactive dashboard for real-time predictions",
+        "Feature importance analysis with SHAP values"
       ]
     },
     {
-      title: "Thematic Rotation Trading Strategy",
-      description: "Systematic allocation framework rotating capital across Technology, Defense, Nuclear, and Finance themes using cross-sectional momentum, regime filters, and volatility targeting.",
-      technologies: ["Python", "QuantConnect", "Financial Modeling", "Risk Management"],
+      title: "Healthcare Data Analytics Platform",
+      description: "Built a comprehensive analytics platform for healthcare data analysis, featuring patient outcome prediction, resource optimization, and interactive dashboards for clinical decision support.",
+      technologies: ["Python", "Tableau", "SQL", "Azure", "Power BI"],
       highlights: [
-        "Cross-sectional momentum strategy",
-        "Regime filters and volatility targeting",
-        "Backtests from 2018-2025",
-        "Multi-theme systematic allocation"
+        "Predictive models for patient readmission risk",
+        "Real-time dashboards tracking key performance indicators",
+        "ETL pipelines processing 100K+ patient records",
+        "Reduced data processing time by 60%"
       ]
     }
   ];
@@ -197,9 +198,9 @@ export default function Home() {
     "Programming & Tools": ["Python", "R", "SQL", "Jupyter", "Git", "GitHub"],
     "Machine Learning": ["XGBoost", "Random Forest", "Deep Learning", "PyTorch", "scikit-learn", "TensorFlow"],
     "Data Engineering": ["Databricks", "Azure", "AWS", "Big Data", "ETL Pipelines", "Data Warehousing"],
-    "Data Analysis": ["Pandas", "NumPy", "Statistical Analysis", "A/B Testing", "Hypothesis Testing"],
+    "Data Analysis": ["Pandas", "NumPy", "Statistical Analysis", "A/B Testing", "Hypothesis Testing", "Time Series"],
     "Visualization": ["Plotly", "Streamlit", "Tableau", "Power BI", "Matplotlib", "Seaborn"],
-    "Finance & Quant": ["QuantConnect", "Financial Modeling", "Risk Management", "Algorithmic Trading", "Portfolio Management"]
+    "Specialized Skills": ["NLP", "Computer Vision", "Predictive Modeling", "Data Mining", "Feature Engineering", "Model Deployment"]
   };
 
   // Data for D3.js charts
@@ -210,7 +211,7 @@ export default function Home() {
     { skill: "SQL", level: 85 },
     { skill: "Data Viz", level: 88 },
     { skill: "Cloud (AWS/Azure)", level: 75 },
-    { skill: "Finance", level: 80 },
+    { skill: "NLP", level: 82 },
     { skill: "Statistics", level: 87 }
   ];
 
@@ -226,7 +227,7 @@ export default function Home() {
     { category: "Data Engineering", count: 6 },
     { category: "Programming", count: 6 },
     { category: "Visualization", count: 6 },
-    { category: "Finance", count: 6 }
+    { category: "Specialized", count: 6 }
   ];
 
   const scrollToSection = (id: string) => {
@@ -261,9 +262,9 @@ export default function Home() {
             <div className="relative">
               <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-primary shadow-2xl">
                 <img 
-                  src="/profile.png" 
+                  src="/profile-centered.png" 
                   alt="Russell Lancaster" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
               <div className="absolute -bottom-2 -right-2 bg-primary text-primary-foreground rounded-full p-2">
@@ -284,7 +285,7 @@ export default function Home() {
             </div>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl">
-              Data-driven leader with 3+ years of experience specializing in translating complex financial and business challenges into actionable predictive models and strategic insights.
+              Data-driven professional with 3+ years of experience specializing in transforming complex business challenges into actionable insights through advanced analytics, machine learning, and data visualization.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center pt-4">
@@ -302,6 +303,12 @@ export default function Home() {
                 <a href="https://github.com/rlancaster243" target="_blank" rel="noopener noreferrer">
                   <Github className="w-5 h-5" />
                   GitHub
+                </a>
+              </Button>
+              <Button size="lg" variant="outline" className="gap-2" asChild>
+                <a href="https://www.researchgate.net/profile/Russell_Lancaster" target="_blank" rel="noopener noreferrer">
+                  <BookOpen className="w-5 h-5" />
+                  ResearchGate
                 </a>
               </Button>
             </div>
@@ -330,10 +337,10 @@ export default function Home() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  I bridge the gap between advanced quantitative research and practical business solutions, focusing on enhancing risk management, improving operational efficiency, and driving strategic decision-making through rigorous data science.
+                  I bridge the gap between complex data and actionable business insights, focusing on leveraging machine learning, statistical analysis, and data visualization to solve real-world problems and drive data-informed decision-making.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  My expertise spans quantitative modeling, strategic analytics, AI/ML deployment, and data storytelling, with a mission to build systematic, transparent, and high-performance analytical systems.
+                  My expertise spans predictive modeling, data engineering, AI/ML deployment, and interactive dashboard development, with a mission to build scalable, interpretable, and high-impact data solutions.
                 </p>
               </CardContent>
             </Card>
@@ -347,12 +354,12 @@ export default function Home() {
               </CardHeader>
               <CardContent className="space-y-3">
                 <div>
-                  <h4 className="font-semibold text-primary mb-1">Quantitative Modeling</h4>
-                  <p className="text-sm text-muted-foreground">Design, validation, and deployment of ML, Statistical, and Time-Series models for forecasting and risk attribution.</p>
+                  <h4 className="font-semibold text-primary mb-1">Predictive Modeling</h4>
+                  <p className="text-sm text-muted-foreground">Design, validation, and deployment of ML models, statistical techniques, and time-series forecasting for business intelligence and decision support.</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-primary mb-1">Strategic Analytics</h4>
-                  <p className="text-sm text-muted-foreground">Applying Economics, Geopolitics, and Financial Theory to analyze macroeconomic regimes and sector dynamics.</p>
+                  <h4 className="font-semibold text-primary mb-1">Data Analytics</h4>
+                  <p className="text-sm text-muted-foreground">Applying statistical methods, exploratory data analysis, and hypothesis testing to uncover patterns, trends, and actionable insights from complex datasets.</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-primary mb-1">AI/ML Deployment</h4>

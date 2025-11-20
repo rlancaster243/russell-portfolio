@@ -149,7 +149,7 @@ export default function SkillsDistributionChart({ data }: SkillsDistributionChar
                 d.category === 'Data Engineering' ? 'Infrastructure & pipelines' :
                 d.category === 'Programming' ? 'Languages & frameworks' :
                 d.category === 'Visualization' ? 'Data presentation tools' :
-                'Financial modeling & trading'}
+                'NLP, computer vision & advanced techniques'}
             </div>
           `);
       })

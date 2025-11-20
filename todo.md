@@ -49,4 +49,13 @@
 - [x] Add colorful theme-based colors to Skills Distribution Chart
 - [x] Add interactive tooltips to Skills Distribution Chart
 - [x] Test all chart interactivity and tooltips
-- [ ] Deploy chart enhancements to GitHub
+- [x] Deploy chart enhancements to GitHub
+
+## Portfolio Content Updates
+
+- [x] Add ResearchGate link next to LinkedIn and GitHub
+- [x] Center and crop profile image within the circle
+- [x] Refocus projects on Data Science and Data Analysis (remove/reduce quantitative finance focus)
+- [x] Refocus certifications on Data Science and Data Analysis (remove/reduce quantitative finance focus)
+- [x] Test all changes in browser
+- [ ] Deploy updates to GitHub
