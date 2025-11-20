@@ -149,4 +149,11 @@
 - [x] Remove CertificationsTimeline usage and card from Home.tsx
 - [x] Remove certificationsTimelineData from Home.tsx
 - [x] Test that website works without errors
+- [x] Push to GitHub
+
+## Fix Vercel Deployment - Output Directory
+
+- [x] Check vercel.json configuration
+- [x] Ensure output directory is set to dist/public
 - [ ] Push to GitHub
+- [ ] Verify Vercel deployment
