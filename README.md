@@ -1,104 +1,104 @@
-# Russell Lancaster - Portfolio Website
+# Russell Lancaster | Portfolio
 
-Professional portfolio website showcasing data science expertise, quantitative analysis experience, and comprehensive certifications.
+Turning complex data into actionable product intelligence.
 
-## 🚀 Features
+## About Me
 
-- **Comprehensive Profile**: 5+ years of data science and quantitative analysis experience
-- **Featured Projects**: 5 major projects including Faith-Based Survey Dashboard, Credit Default Prediction, and Trading Strategies
-- **Certifications Showcase**: 16 data-focused certifications from 130+ total certifications
-- **Technical Skills**: Organized by category (Programming, ML, Data Engineering, Visualization, Finance)
-- **Responsive Design**: Professional dark theme optimized for all devices
-- **Smooth Navigation**: Single-page application with smooth scrolling
+I am a data professional with 5+ years of experience across data science, quantitative analysis, and full stack development. My work focuses on converting raw information into operational insight. I hold over 130 certifications and specialize in product intelligence, weighted survey analytics, behavioral telemetry, and quantitative modeling.
 
-## 🛠️ Tech Stack
+My current research centers on digital flourishing and user engagement using large scale survey data and structured analytics to identify patterns in human behavior.
 
-- **Framework**: React 19 + Vite
-- **Styling**: Tailwind CSS 4 + shadcn/ui
-- **Routing**: Wouter
-- **Icons**: Lucide React
-- **Deployment**: Vercel
+## Featured Projects
 
-## 📦 Installation
+### Digital Discipleship Intelligence Dashboard
 
-```bash
-# Install dependencies
-pnpm install
+A product intelligence system analyzing the intersection of faith habits and life outcomes.
+**Tech:** Python, Streamlit, Plotly Express, Pandas
+**Capabilities:** Weighted survey modeling, Flourishing Index radar charts, generational engagement tracking
+**Outcome:** Clear visually supported correlations between digital engagement and reported well being.
 
-# Start development server
-pnpm run dev
+### Credit Default Prediction Model
 
-# Build for production
-pnpm run build
-```
+A machine learning workflow for borrower default risk estimation.
+**Tech:** Scikit Learn, XGBoost, Python
+**Capabilities:** Financial feature engineering, ROC AUC evaluation, SHAP based interpretability
+**Outcome:** High precision default probability estimation with tunable risk thresholds.
 
-## 🌐 Deployment
+### Quantitative Trading Strategies
 
-### Deploy to Vercel (Recommended)
+A backtesting engine for tactical and strategic market models.
+**Tech:** Python, NumPy, financial APIs
+**Capabilities:** Momentum systems, moving average crossovers, risk adjusted performance metrics
+**Outcome:** Systematic strategy evaluation using Sharpe ratio, drawdown, and volatility signals.
 
-1. Go to [vercel.com](https://vercel.com) and sign in
-2. Click "Add New Project"
-3. Import this GitHub repository: `rlancaster243/russell-portfolio`
-4. Vercel will auto-detect the configuration
-5. Click "Deploy"
+## Certifications and Skills
 
-The `vercel.json` file is already configured for optimal deployment.
+### Data Science
 
-### Manual Deployment
+Python, Pandas, NumPy, Scikit Learn, R
 
-```bash
-# Install Vercel CLI
-pnpm add -g vercel
+### Visualization
 
-# Login to Vercel
-vercel login
+Tableau, Power BI, Plotly, Streamlit
 
-# Deploy to production
-vercel --prod
-```
+### Web Development
 
-## 📁 Project Structure
+React 19, TypeScript, Tailwind CSS, Vite
+
+### Finance
+
+Quantitative analysis, risk modeling, algorithmic trading
+
+A curated subset of 16 data focused certifications is highlighted in the portfolio.
+
+## Website Architecture
+
+This portfolio was developed from scratch to demonstrate modern front-end capability.
+
+### Tech Stack
+
+Framework: React 19 with Vite
+Styling: Tailwind CSS 4 with shadcn/ui
+Routing: Wouter
+Icons: Lucide React
+
+### Project Structure
 
 ```
 russell-portfolio/
-├── client/
-│   ├── src/
-│   │   ├── pages/
-│   │   │   └── Home.tsx          # Main portfolio page
-│   │   ├── components/           # Reusable UI components
-│   │   ├── App.tsx              # App configuration
-│   │   └── index.css            # Global styles
-│   ├── public/                  # Static assets
-│   └── index.html               # HTML template
-├── vercel.json                  # Vercel configuration
-└── package.json                 # Dependencies
+├── client/src/
+│   ├── components/   # Reusable UI components
+│   ├── pages/        # Page level layout
+│   ├── lib/          # Utilities and constants
+│   └── App.tsx       # Application entry point
+└── vercel.json       # Deployment config
 ```
 
-## 🎨 Customization
+## Local Development
 
-### Update Profile Information
+Clone the repository:
 
-Edit `/client/src/pages/Home.tsx` to update:
-- Personal information
-- Experience details
-- Projects
-- Certifications
-- Skills
+```
+git clone https://github.com/rlancaster243/russell-portfolio.git
+```
 
-### Change Theme Colors
+Install dependencies:
 
-Edit `/client/src/index.css` to customize the color palette in the `:root` and `.dark` sections.
+```
+pnpm install
+```
 
-## 📄 License
+Start the dev server:
 
-© 2025 Russell Lancaster. All rights reserved.
+```
+pnpm run dev
+```
 
-## 🔗 Links
+## Contact
 
-- **GitHub**: [rlancaster243](https://github.com/rlancaster243)
-- **LinkedIn**: [russell-lancaster-72b230214](https://www.linkedin.com/in/russell-lancaster-72b230214/)
-- **Live Site**: [Deploy to see your live URL]
+Open to roles in data analysis, data science, data engineering, product analytics, and quantitative research.
 
----
+LinkedIn: Russell Lancaster
+GitHub: @rlancaster243
 
-Built with ❤️ using React, Vite, and Tailwind CSS
+© 2025 Russell Lancaster. Built with React.

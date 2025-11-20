@@ -37,5 +37,16 @@
 ## Vercel Deployment Fix
 
 - [x] Fix vercel.json output directory configuration
-- [ ] Push fix to GitHub
+- [x] Push fix to GitHub
 - [ ] Verify Vercel deployment succeeds
+
+## Chart Enhancements
+
+- [x] Add colorful theme-based colors to Skills Radar Chart
+- [x] Add interactive tooltips to Skills Radar Chart
+- [x] Add colorful theme-based colors to Certifications Timeline
+- [x] Add interactive tooltips to Certifications Timeline
+- [x] Add colorful theme-based colors to Skills Distribution Chart
+- [x] Add interactive tooltips to Skills Distribution Chart
+- [x] Test all chart interactivity and tooltips
+- [ ] Deploy chart enhancements to GitHub
