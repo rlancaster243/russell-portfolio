@@ -146,7 +146,8 @@ export default function Home() {
         "Implemented statistical analysis features including correlation matrices and chi-square tests",
         "Created AI-powered insights for automated pattern recognition",
         "Processed survey responses from 5,600+ participants"
-      ]
+      ],
+      githubUrl: "https://github.com/rlancaster243/Faith-Based-Survey-Intelligence-Dashboard"
     },
     {
       title: "Credit Default Prediction",
@@ -157,7 +158,8 @@ export default function Home() {
         "Interactive threshold control for dynamic risk management",
         "Real-time confusion matrix and metrics visualization",
         "Deployed through Streamlit with intuitive dashboard"
-      ]
+      ],
+      githubUrl: "https://github.com/rlancaster243/Credit-Default-Prediction-Streamlit"
     },
     {
       title: "Steam KPI Intelligence (SKI)",
@@ -168,7 +170,8 @@ export default function Home() {
         "Dashboard for batch scoring with prediction explanations",
         "Cross-validated hyperparameter search",
         "Comprehensive explainability stack"
-      ]
+      ],
+      githubUrl: "https://github.com/rlancaster243/Steam-KPI-Intelligence"
     },
     {
       title: "Customer Segmentation & Churn Analysis",
@@ -179,7 +182,8 @@ export default function Home() {
         "XGBoost churn model achieved 89% accuracy",
         "Interactive dashboard for real-time predictions",
         "Feature importance analysis with SHAP values"
-      ]
+      ],
+      githubUrl: null
     },
     {
       title: "Healthcare Data Analytics Platform",
@@ -190,7 +194,8 @@ export default function Home() {
         "Real-time dashboards tracking key performance indicators",
         "ETL pipelines processing 100K+ patient records",
         "Reduced data processing time by 60%"
-      ]
+      ],
+      githubUrl: null
     }
   ];
 
@@ -493,10 +498,20 @@ export default function Home() {
                       ))}
                     </ul>
                   </div>
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    {project.technologies.map((tech, i) => (
-                      <Badge key={i} variant="outline" className="text-xs">{tech}</Badge>
-                    ))}
+                  <div className="space-y-3">
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, i) => (
+                        <Badge key={i} variant="outline" className="text-xs">{tech}</Badge>
+                      ))}
+                    </div>
+                    {project.githubUrl && (
+                      <Button variant="outline" size="sm" className="w-full gap-2" asChild>
+                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                          <Github className="w-4 h-4" />
+                          View on GitHub
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </CardContent>
               </Card>

@@ -72,4 +72,11 @@
 - [x] Update hero description to remove financial modeling references
 - [x] Ensure no project descriptions mention trading or markets
 - [x] Test all changes in browser
+- [x] Deploy updates to GitHub
+
+## Add GitHub Links to Projects
+
+- [x] Find GitHub repository links for all 5 projects
+- [x] Add "View on GitHub" buttons to project cards
+- [x] Test GitHub links functionality
 - [ ] Deploy updates to GitHub
