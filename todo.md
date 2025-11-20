@@ -108,4 +108,12 @@
 ### Testing & Deployment
 - [x] Test all chart enhancements in browser
 - [x] Verify interactivity and tooltips
-- [ ] Deploy updates to GitHub
+- [x] Deploy updates to GitHub
+
+## Profile Image Update
+
+- [x] Process and center new profile image for circular display
+- [x] Replace old profile image with new one
+- [x] Update image references in code
+- [x] Test image display
+- [ ] Deploy to GitHub
