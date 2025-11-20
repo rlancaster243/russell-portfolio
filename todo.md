@@ -128,5 +128,11 @@
 
 - [x] Update vercel.json with correct output directory path
 - [x] Remove buildCommand and let Vercel auto-detect
+- [x] Push fix to GitHub
+- [ ] Verify Vercel deployment succeeds
+
+## Vercel Deployment Fix - Use client/public
+
+- [x] Update vercel.json output directory to client/public
 - [ ] Push fix to GitHub
 - [ ] Verify Vercel deployment succeeds
