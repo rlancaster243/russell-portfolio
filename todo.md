@@ -116,4 +116,10 @@
 - [x] Replace old profile image with new one
 - [x] Update image references in code
 - [x] Test image display
-- [ ] Deploy to GitHub
+- [x] Deploy to GitHub
+
+## Vercel Deployment Fix (Output Directory)
+
+- [x] Fix vercel.json output directory configuration
+- [ ] Push fix to GitHub
+- [ ] Verify Vercel deployment succeeds
