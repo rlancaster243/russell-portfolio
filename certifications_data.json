@@ -1,0 +1,130 @@
+[
+  {
+    "title": "Deep Learning Fundamentals Lab Unit 1",
+    "organization": "WorldQuant University",
+    "date": "Sep 2025",
+    "skills": ["Deep Learning", "Python Programming"],
+    "category": "Data Science"
+  },
+  {
+    "title": "Deep Learning Fundamentals Unit 1",
+    "organization": "WorldQuant University",
+    "date": "2025",
+    "skills": ["Deep Learning", "Python"],
+    "category": "Data Science"
+  },
+  {
+    "title": "Advanced Machine Learning Operations",
+    "organization": "Databricks",
+    "date": "May 2025",
+    "skills": ["Machine Learning", "MLOps"],
+    "category": "Data Engineering"
+  },
+  {
+    "title": "Applied AI Lab: Deep Learning for Computer Vision",
+    "organization": "WorldQuant University",
+    "date": "May 2025",
+    "skills": ["Computer Vision", "Deep Learning"],
+    "category": "Data Science"
+  },
+  {
+    "title": "BCG - Data Science Job Simulation",
+    "organization": "Forage",
+    "date": "May 2025",
+    "skills": ["Data Science", "Business Analytics"],
+    "category": "Data Science"
+  },
+  {
+    "title": "Career Essentials in Data Analysis by Microsoft and LinkedIn",
+    "organization": "Microsoft",
+    "date": "May 2025",
+    "skills": ["Data Analysis", "Data Visualization"],
+    "category": "Data Analysis"
+  },
+  {
+    "title": "Learning Data Analytics: Extending and Applying Core Knowledge",
+    "organization": "LinkedIn",
+    "date": "May 2025",
+    "skills": ["Data Analytics", "Advanced Analytics"],
+    "category": "Data Analysis"
+  },
+  {
+    "title": "Learning Data Analytics: Foundations",
+    "organization": "LinkedIn",
+    "date": "May 2025",
+    "skills": ["Data Analytics", "Foundations"],
+    "category": "Data Analysis"
+  },
+  {
+    "title": "Data Science Bootcamp",
+    "organization": "Hasso Plattner Institute",
+    "date": "May 2025",
+    "skills": ["Data Science", "Python", "Statistics"],
+    "category": "Data Science"
+  },
+  {
+    "title": "Academy Accreditation - Databricks Fundamentals",
+    "organization": "Databricks",
+    "date": "May 2025",
+    "expires": "May 2026",
+    "skills": ["Databricks", "Big Data"],
+    "category": "Data Engineering"
+  },
+  {
+    "title": "Academy Accreditation - Generative AI Fundamentals",
+    "organization": "Databricks",
+    "date": "May 2025",
+    "expires": "May 2027",
+    "skills": ["Generative AI", "Machine Learning"],
+    "category": "Data Science"
+  },
+  {
+    "title": "US Equities Bootcamp",
+    "organization": "QuantConnect",
+    "date": "Sep 2025",
+    "skills": ["Quantitative Analytics", "Financial Data"],
+    "category": "Data Analysis"
+  },
+  {
+    "title": "Automated Trading with IBridgePy using Interactive Brokers Platform",
+    "organization": "Quantra",
+    "date": "May 2025",
+    "skills": ["Algorithmic Trading", "Python", "Data Analysis"],
+    "category": "Data Science"
+  },
+  {
+    "title": "Citi - Markets Quantitative Analysis (MQA) Job Simulation",
+    "organization": "Forage",
+    "date": "May 2025",
+    "skills": ["Quantitative Analysis", "Financial Modeling"],
+    "category": "Data Analysis"
+  },
+  {
+    "title": "JPMorgan Chase & Co. - Quantitative Research Job Simulation",
+    "organization": "Forage",
+    "date": "May 2025",
+    "skills": ["Quantitative Research", "Data Analysis"],
+    "category": "Data Analysis"
+  },
+  {
+    "title": "Knowledge Graphs - Foundations and Applications",
+    "organization": "Hasso Plattner Institute",
+    "date": "May 2025",
+    "skills": ["Knowledge Graphs", "Data Structures"],
+    "category": "Data Engineering"
+  },
+  {
+    "title": "Discounted Cash Flow Modeling",
+    "organization": "Wall Street Oasis",
+    "date": "May 2025",
+    "skills": ["Financial Modeling", "Data Analysis"],
+    "category": "Data Analysis"
+  },
+  {
+    "title": "BCG - GenAI Job Simulation",
+    "organization": "Forage",
+    "date": "May 2025",
+    "skills": ["Generative AI", "AI Applications"],
+    "category": "Data Science"
+  }
+]
