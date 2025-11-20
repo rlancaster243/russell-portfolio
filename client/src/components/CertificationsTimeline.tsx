@@ -21,15 +21,34 @@ export default function CertificationsTimeline({ data }: CertificationsTimelineP
     const tooltip = d3.select(tooltipRef.current);
     svg.selectAll('*').remove();
 
-    const margin = { top: 20, right: 30, bottom: 40, left: 50 };
+    const margin = { top: 70, right: 30, bottom: 60, left: 60 };
     const width = 600 - margin.left - margin.right;
-    const height = 300 - margin.top - margin.bottom;
+    const height = 350 - margin.top - margin.bottom;
 
     const g = svg
       .attr('width', width + margin.left + margin.right)
       .attr('height', height + margin.top + margin.bottom)
       .append('g')
       .attr('transform', `translate(${margin.left},${margin.top})`);
+
+    // Add chart title
+    svg.append('text')
+      .attr('x', (width + margin.left + margin.right) / 2)
+      .attr('y', 25)
+      .attr('text-anchor', 'middle')
+      .style('font-size', '18px')
+      .style('font-weight', '700')
+      .style('fill', 'hsl(var(--foreground))')
+      .text('Certification Accumulation: 2023–2025');
+
+    // Add subtitle
+    svg.append('text')
+      .attr('x', (width + margin.left + margin.right) / 2)
+      .attr('y', 45)
+      .attr('text-anchor', 'middle')
+      .style('font-size', '13px')
+      .style('fill', 'hsl(var(--muted-foreground))')
+      .text('Continuous learning and professional development trajectory');
 
     // Create scales
     const xScale = d3
@@ -39,9 +58,18 @@ export default function CertificationsTimeline({ data }: CertificationsTimelineP
 
     const yScale = d3
       .scaleLinear()
-      .domain([0, d3.max(data, (d) => d.count) as number])
+      .domain([0, d3.max(data, (d) => d.count)! * 1.1])
       .nice()
       .range([height, 0]);
+
+    // Add grid lines
+    g.append('g')
+      .attr('class', 'grid')
+      .attr('opacity', 0.1)
+      .call(d3.axisLeft(yScale)
+        .tickSize(-width)
+        .tickFormat(() => '')
+      );
 
     // Create line generator
     const line = d3
@@ -49,34 +77,6 @@ export default function CertificationsTimeline({ data }: CertificationsTimelineP
       .x((d) => xScale(d.year))
       .y((d) => yScale(d.count))
       .curve(d3.curveMonotoneX);
-
-    // Add X axis
-    g.append('g')
-      .attr('transform', `translate(0,${height})`)
-      .call(d3.axisBottom(xScale).tickFormat(d3.format('d')))
-      .attr('color', 'hsl(var(--muted-foreground))')
-      .selectAll('text')
-      .attr('font-size', '12px')
-      .attr('font-weight', '500');
-
-    // Add Y axis
-    g.append('g')
-      .call(d3.axisLeft(yScale))
-      .attr('color', 'hsl(var(--muted-foreground))')
-      .selectAll('text')
-      .attr('font-size', '12px')
-      .attr('font-weight', '500');
-
-    // Add Y axis label
-    g.append('text')
-      .attr('transform', 'rotate(-90)')
-      .attr('y', -40)
-      .attr('x', -height / 2)
-      .attr('text-anchor', 'middle')
-      .attr('fill', 'hsl(var(--foreground))')
-      .attr('font-size', '14px')
-      .attr('font-weight', '600')
-      .text('Certifications Earned');
 
     // Create gradient for the area
     const areaGradient = svg.append('defs')
@@ -140,6 +140,43 @@ export default function CertificationsTimeline({ data }: CertificationsTimelineP
       .attr('d', line)
       .style('filter', 'drop-shadow(0 0 8px rgba(34, 197, 94, 0.5))');
 
+    // Add X axis
+    g.append('g')
+      .attr('transform', `translate(0,${height})`)
+      .call(d3.axisBottom(xScale).tickFormat(d3.format('d')))
+      .attr('color', 'hsl(var(--muted-foreground))')
+      .selectAll('text')
+      .attr('font-size', '13px')
+      .attr('font-weight', '500');
+
+    // Add Y axis
+    g.append('g')
+      .call(d3.axisLeft(yScale))
+      .attr('color', 'hsl(var(--muted-foreground))')
+      .selectAll('text')
+      .attr('font-size', '13px')
+      .attr('font-weight', '500');
+
+    // Add axis labels
+    g.append('text')
+      .attr('x', width / 2)
+      .attr('y', height + 45)
+      .attr('text-anchor', 'middle')
+      .attr('fill', 'hsl(var(--foreground))')
+      .attr('font-size', '14px')
+      .attr('font-weight', '600')
+      .text('Year');
+
+    g.append('text')
+      .attr('transform', 'rotate(-90)')
+      .attr('y', -45)
+      .attr('x', -height / 2)
+      .attr('text-anchor', 'middle')
+      .attr('fill', 'hsl(var(--foreground))')
+      .attr('font-size', '14px')
+      .attr('font-weight', '600')
+      .text('Total Certifications');
+
     // Color scale for points
     const colorScale = d3.scaleOrdinal<number, string>()
       .domain(data.map(d => d.year))
@@ -149,7 +186,43 @@ export default function CertificationsTimeline({ data }: CertificationsTimelineP
         'hsl(142, 76%, 36%)'
       ]);
 
-    // Add interactive data points with tooltips
+    // Add milestone annotations
+    const milestones = [
+      { year: 2023, label: 'Started Journey', description: 'First certifications' },
+      { year: 2024, label: 'Peak Growth', description: '+30 certifications' },
+      { year: 2025, label: 'Current Progress', description: '+25 certifications' }
+    ];
+
+    milestones.forEach(milestone => {
+      const dataPoint = data.find(d => d.year === milestone.year);
+      if (!dataPoint) return;
+
+      const x = xScale(dataPoint.year);
+      const y = yScale(dataPoint.count);
+
+      // Annotation line
+      g.append('line')
+        .attr('x1', x)
+        .attr('y1', y - 15)
+        .attr('x2', x)
+        .attr('y2', y - 40)
+        .attr('stroke', 'hsl(var(--muted-foreground))')
+        .attr('stroke-width', 1.5)
+        .attr('stroke-dasharray', '3,3')
+        .attr('opacity', 0.6);
+
+      // Annotation text
+      g.append('text')
+        .attr('x', x)
+        .attr('y', y - 45)
+        .attr('text-anchor', 'middle')
+        .style('font-size', '11px')
+        .style('font-weight', '600')
+        .style('fill', colorScale(milestone.year))
+        .text(milestone.label);
+    });
+
+    // Add interactive data points with enhanced tooltips
     g.selectAll('.dot')
       .data(data)
       .enter()
@@ -170,28 +243,43 @@ export default function CertificationsTimeline({ data }: CertificationsTimelineP
           .attr('r', 10)
           .style('filter', `drop-shadow(0 0 12px ${colorScale(d.year)})`);
 
+        const growth = data.indexOf(d) > 0 
+          ? d.count - data[data.indexOf(d) - 1].count 
+          : d.count;
+        const growthText = growth > 0 ? `+${growth}` : `${growth}`;
+        const growthRate = data.indexOf(d) > 0
+          ? ((growth / data[data.indexOf(d) - 1].count) * 100).toFixed(1)
+          : '—';
+
         tooltip
           .style('opacity', '1')
-          .style('left', `${event.pageX + 10}px`)
-          .style('top', `${event.pageY - 10}px`)
+          .style('left', `${event.pageX + 15}px`)
+          .style('top', `${event.pageY - 15}px`)
           .html(`
-            <div style="font-weight: 600; color: ${colorScale(d.year)}; margin-bottom: 4px;">
+            <div style="font-weight: 700; color: ${colorScale(d.year)}; margin-bottom: 8px; font-size: 15px;">
               Year ${d.year}
             </div>
-            <div style="font-size: 14px;">
-              Certifications: <strong>${d.count}</strong>
+            <div style="margin-bottom: 6px; font-size: 14px;">
+              <strong>Total Certifications:</strong> ${d.count}
             </div>
-            <div style="font-size: 12px; color: hsl(var(--muted-foreground)); margin-top: 4px;">
-              ${d.year === 2023 ? 'Started certification journey' : 
-                d.year === 2024 ? '+30 certifications' : 
-                '+25 certifications'}
+            <div style="margin-bottom: 6px; font-size: 14px;">
+              <strong>Growth:</strong> ${growthText} certifications
             </div>
+            ${data.indexOf(d) > 0 ? `
+              <div style="color: hsl(var(--muted-foreground)); font-size: 12px; margin-top: 8px; padding-top: 8px; border-top: 1px solid hsl(var(--border));">
+                <strong>${growthRate}%</strong> increase from previous year
+              </div>
+            ` : `
+              <div style="color: hsl(var(--muted-foreground)); font-size: 12px; margin-top: 8px; padding-top: 8px; border-top: 1px solid hsl(var(--border));">
+                Started certification journey
+              </div>
+            `}
           `);
       })
       .on('mousemove', function(event) {
         tooltip
-          .style('left', `${event.pageX + 10}px`)
-          .style('top', `${event.pageY - 10}px`);
+          .style('left', `${event.pageX + 15}px`)
+          .style('top', `${event.pageY - 15}px`);
       })
       .on('mouseleave', function(event, d) {
         d3.select(this)
@@ -230,14 +318,15 @@ export default function CertificationsTimeline({ data }: CertificationsTimelineP
           pointerEvents: 'none',
           background: 'hsl(var(--popover))',
           border: '1px solid hsl(var(--border))',
-          borderRadius: '8px',
-          padding: '12px',
-          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
+          borderRadius: '10px',
+          padding: '14px 16px',
+          boxShadow: '0 8px 24px rgba(0, 0, 0, 0.4)',
           zIndex: 1000,
           transition: 'opacity 0.2s',
           color: 'hsl(var(--popover-foreground))',
           fontSize: '13px',
-          minWidth: '180px'
+          minWidth: '220px',
+          backdropFilter: 'blur(8px)'
         }}
       />
     </div>

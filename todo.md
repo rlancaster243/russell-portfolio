@@ -79,4 +79,33 @@
 - [x] Find GitHub repository links for all 5 projects
 - [x] Add "View on GitHub" buttons to project cards
 - [x] Test GitHub links functionality
+- [x] Deploy updates to GitHub
+
+## Chart Enhancements - Professional Dashboard Improvements
+
+### Certification Timeline Enhancements
+- [x] Add clear chart title "Certification Accumulation: 2023–2025"
+- [x] Add annotation markers for key milestones
+- [x] Improve tooltips with detailed certification information
+- [x] Make cumulative growth more prominent
+
+### Skills Distribution Enhancements
+- [x] Add legend with color grouping for domains
+- [x] Add explicit axis labels with clear descriptions
+- [x] Improve category labeling and readability
+
+### Technical Proficiency Radar Enhancements
+- [x] Improve radar chart design and clarity
+- [x] Add better labeling for skill dimensions
+- [x] Enhance visual hierarchy
+
+### General Accessibility & Design
+- [x] Ensure high-contrast colors for all charts
+- [x] Test colorblind accessibility
+- [x] Verify responsive scaling on mobile devices
+- [x] Add brief captions explaining each chart's purpose
+
+### Testing & Deployment
+- [x] Test all chart enhancements in browser
+- [x] Verify interactivity and tooltips
 - [ ] Deploy updates to GitHub
