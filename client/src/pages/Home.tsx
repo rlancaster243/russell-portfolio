@@ -5,7 +5,6 @@ import {
   Github, 
   Linkedin, 
   Mail, 
-  ExternalLink, 
   Briefcase, 
   GraduationCap, 
   Award,
@@ -13,8 +12,12 @@ import {
   Database,
   Brain,
   TrendingUp,
-  ChevronDown
+  ChevronDown,
+  BarChart3
 } from "lucide-react";
+import SkillsRadarChart from "@/components/SkillsRadarChart";
+import CertificationsTimeline from "@/components/CertificationsTimeline";
+import SkillsDistributionChart from "@/components/SkillsDistributionChart";
 
 export default function Home() {
   const certifications = [
@@ -199,6 +202,33 @@ export default function Home() {
     "Finance & Quant": ["QuantConnect", "Financial Modeling", "Risk Management", "Algorithmic Trading", "Portfolio Management"]
   };
 
+  // Data for D3.js charts
+  const skillsRadarData = [
+    { skill: "Python", level: 95 },
+    { skill: "Machine Learning", level: 90 },
+    { skill: "Data Analysis", level: 92 },
+    { skill: "SQL", level: 85 },
+    { skill: "Data Viz", level: 88 },
+    { skill: "Cloud (AWS/Azure)", level: 75 },
+    { skill: "Finance", level: 80 },
+    { skill: "Statistics", level: 87 }
+  ];
+
+  const certificationsTimelineData = [
+    { year: 2023, count: 15 },
+    { year: 2024, count: 45 },
+    { year: 2025, count: 70 }
+  ];
+
+  const skillsDistributionData = [
+    { category: "Data Science", count: 6 },
+    { category: "ML/AI", count: 6 },
+    { category: "Data Engineering", count: 6 },
+    { category: "Programming", count: 6 },
+    { category: "Visualization", count: 6 },
+    { category: "Finance", count: 6 }
+  ];
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -214,6 +244,7 @@ export default function Home() {
               <button onClick={() => scrollToSection('about')} className="hover:text-primary transition-colors">About</button>
               <button onClick={() => scrollToSection('experience')} className="hover:text-primary transition-colors">Experience</button>
               <button onClick={() => scrollToSection('projects')} className="hover:text-primary transition-colors">Projects</button>
+              <button onClick={() => scrollToSection('analytics')} className="hover:text-primary transition-colors">Analytics</button>
               <button onClick={() => scrollToSection('certifications')} className="hover:text-primary transition-colors">Certifications</button>
               <button onClick={() => scrollToSection('skills')} className="hover:text-primary transition-colors">Skills</button>
               <button onClick={() => scrollToSection('contact')} className="hover:text-primary transition-colors">Contact</button>
@@ -226,12 +257,26 @@ export default function Home() {
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col items-center text-center space-y-6">
+            {/* Profile Image */}
+            <div className="relative">
+              <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-primary shadow-2xl">
+                <img 
+                  src="/profile.png" 
+                  alt="Russell Lancaster" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-2 -right-2 bg-primary text-primary-foreground rounded-full p-2">
+                <TrendingUp className="w-6 h-6" />
+              </div>
+            </div>
+
             <div className="space-y-4">
               <h1 className="text-5xl md:text-7xl font-bold">
                 <span className="gradient-text">Russell Lancaster</span>
               </h1>
               <div className="flex items-center justify-center gap-2 text-xl md:text-2xl text-muted-foreground">
-                <span>Data Specialist</span>
+                <span>Data Professional</span>
                 <span>🇹🇹 🇺🇸</span>
                 <span>|</span>
                 <span>God First in Everything ✝️</span>
@@ -239,7 +284,7 @@ export default function Home() {
             </div>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl">
-              Data-driven leader with 5+ years of experience specializing in translating complex financial and business challenges into actionable predictive models and strategic insights.
+              Data-driven leader with 3+ years of experience specializing in translating complex financial and business challenges into actionable predictive models and strategic insights.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center pt-4">
@@ -332,39 +377,6 @@ export default function Home() {
                 <div className="flex justify-between items-start flex-wrap gap-4">
                   <div>
                     <CardTitle className="text-2xl">Data Analyst</CardTitle>
-                    <CardDescription className="text-lg">Beacon Ministries Inc</CardDescription>
-                  </div>
-                  <Badge variant="secondary" className="text-sm">May 2025 - Present</Badge>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-muted-foreground">
-                  Developed and deployed a comprehensive Faith-Based Survey Intelligence Dashboard using Streamlit, integrating data from the Pew Research Center's 2024 Religious Landscape Study.
-                </p>
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-primary">Key Achievements:</h4>
-                  <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                    <li>Built interactive multi-page dashboard with advanced filtering for demographic analysis</li>
-                    <li>Implemented statistical analysis features including correlation matrices and chi-square tests</li>
-                    <li>Created AI-powered insights using Google's Gemini API for automated pattern recognition</li>
-                    <li>Established scalable data pipeline for processing 5,600+ survey participants</li>
-                  </ul>
-                </div>
-                <div className="flex flex-wrap gap-2 pt-2">
-                  <Badge variant="outline">Python</Badge>
-                  <Badge variant="outline">Streamlit</Badge>
-                  <Badge variant="outline">Pandas</Badge>
-                  <Badge variant="outline">Plotly</Badge>
-                  <Badge variant="outline">Google Gemini API</Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="card-hover">
-              <CardHeader>
-                <div className="flex justify-between items-start flex-wrap gap-4">
-                  <div>
-                    <CardTitle className="text-2xl">Data Analyst</CardTitle>
                     <CardDescription className="text-lg">NEDCO Trinidad & Tobago</CardDescription>
                   </div>
                   <Badge variant="secondary" className="text-sm">Mar 2022 - Oct 2024 · 2 yrs 8 mos</Badge>
@@ -384,23 +396,6 @@ export default function Home() {
                   <Badge variant="outline">Dashboards</Badge>
                   <Badge variant="outline">UX Consulting</Badge>
                 </div>
-              </CardContent>
-            </Card>
-
-            <Card className="card-hover">
-              <CardHeader>
-                <div className="flex justify-between items-start flex-wrap gap-4">
-                  <div>
-                    <CardTitle className="text-2xl">Quantitative Analyst</CardTitle>
-                    <CardDescription className="text-lg">Freelance</CardDescription>
-                  </div>
-                  <Badge variant="secondary" className="text-sm">Nov 2023 - Present</Badge>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Providing quantitative analysis and financial modeling services for various clients, specializing in algorithmic trading strategies and risk management.
-                </p>
               </CardContent>
             </Card>
           </div>
@@ -502,8 +497,62 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Analytics Section with D3.js Charts */}
+      <section id="analytics" className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl font-bold mb-4 text-center flex items-center justify-center gap-3">
+            <BarChart3 className="w-8 h-8 text-primary" />
+            Data Analytics Showcase
+          </h2>
+          <p className="text-center text-muted-foreground mb-12 text-lg">
+            Interactive visualizations demonstrating expertise in data analysis and visualization
+          </p>
+
+          <div className="space-y-12">
+            {/* Skills Proficiency Radar Chart */}
+            <Card className="card-hover">
+              <CardHeader>
+                <CardTitle className="text-2xl text-center">Technical Proficiency Overview</CardTitle>
+                <CardDescription className="text-center">
+                  Multi-dimensional assessment of core technical competencies
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <SkillsRadarChart data={skillsRadarData} />
+              </CardContent>
+            </Card>
+
+            {/* Certifications Timeline */}
+            <Card className="card-hover">
+              <CardHeader>
+                <CardTitle className="text-2xl text-center">Certification Growth Timeline</CardTitle>
+                <CardDescription className="text-center">
+                  Progressive accumulation of professional certifications over time
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <CertificationsTimeline data={certificationsTimelineData} />
+              </CardContent>
+            </Card>
+
+            {/* Skills Distribution */}
+            <Card className="card-hover">
+              <CardHeader>
+                <CardTitle className="text-2xl text-center">Skills Distribution by Category</CardTitle>
+                <CardDescription className="text-center">
+                  Breadth of expertise across data science domains
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <SkillsDistributionChart data={skillsDistributionData} />
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Certifications Section */}
-      <section id="certifications" className="py-20 px-4 bg-muted/30">
+      <section id="certifications" className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-bold mb-4 text-center flex items-center justify-center gap-3">
             <Award className="w-8 h-8 text-primary" />
@@ -537,7 +586,7 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-4">
+      <section id="skills" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-bold mb-12 text-center flex items-center justify-center gap-3">
             <Database className="w-8 h-8 text-primary" />
@@ -563,7 +612,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 bg-muted/30">
+      <section id="contact" className="py-20 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-6">Let's Connect</h2>
           <p className="text-xl text-muted-foreground mb-8">
@@ -587,7 +636,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-border">
+      <footer className="py-8 px-4 border-t border-border bg-muted/30">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground">
