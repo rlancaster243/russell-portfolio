@@ -17,8 +17,8 @@ import {
   BarChart3
 } from "lucide-react";
 import SkillsRadarChart from "@/components/SkillsRadarChart";
-import CertificationsTimeline from "@/components/CertificationsTimeline";
 import SkillsDistributionChart from "@/components/SkillsDistributionChart";
+
 
 export default function Home() {
   const certifications = [
@@ -173,30 +173,7 @@ export default function Home() {
       ],
       githubUrl: "https://github.com/rlancaster243/Steam-KPI-Intelligence"
     },
-    {
-      title: "Customer Segmentation & Churn Analysis",
-      description: "Developed an end-to-end machine learning solution for customer segmentation and churn prediction using K-Means clustering and ensemble methods, deployed as an interactive Streamlit dashboard.",
-      technologies: ["Python", "scikit-learn", "Pandas", "Streamlit", "Plotly"],
-      highlights: [
-        "K-Means clustering identified 5 distinct customer segments",
-        "XGBoost churn model achieved 89% accuracy",
-        "Interactive dashboard for real-time predictions",
-        "Feature importance analysis with SHAP values"
-      ],
-      githubUrl: null
-    },
-    {
-      title: "Healthcare Data Analytics Platform",
-      description: "Built a comprehensive analytics platform for healthcare data analysis, featuring patient outcome prediction, resource optimization, and interactive dashboards for clinical decision support.",
-      technologies: ["Python", "Tableau", "SQL", "Azure", "Power BI"],
-      highlights: [
-        "Predictive models for patient readmission risk",
-        "Real-time dashboards tracking key performance indicators",
-        "ETL pipelines processing 100K+ patient records",
-        "Reduced data processing time by 60%"
-      ],
-      githubUrl: null
-    }
+    
   ];
 
   const skills = {
@@ -221,11 +198,7 @@ export default function Home() {
     { skill: "Systems & IT", level: 80 }
   ];
 
-  const certificationsTimelineData = [
-    { year: 2023, count: 15 },
-    { year: 2024, count: 45 },
-    { year: 2025, count: 70 }
-  ];
+
 
   const skillsDistributionData = [
     { category: "Programming", count: 6 },
@@ -542,19 +515,6 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <SkillsRadarChart data={skillsRadarData} />
-              </CardContent>
-            </Card>
-
-            {/* Certifications Timeline */}
-            <Card className="card-hover">
-              <CardHeader>
-                <CardTitle className="text-2xl text-center">Certification Growth Timeline</CardTitle>
-                <CardDescription className="text-center">
-                  Progressive accumulation of professional certifications over time
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <CertificationsTimeline data={certificationsTimelineData} />
               </CardContent>
             </Card>
 

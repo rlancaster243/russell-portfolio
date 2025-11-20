@@ -141,4 +141,12 @@
 
 - [x] Update Home.tsx to use profile.jpg
 - [x] Test image display
+- [x] Push to GitHub
+
+## Remove CertificationsTimeline Component
+
+- [x] Remove CertificationsTimeline import from Home.tsx
+- [x] Remove CertificationsTimeline usage and card from Home.tsx
+- [x] Remove certificationsTimelineData from Home.tsx
+- [x] Test that website works without errors
 - [ ] Push to GitHub
