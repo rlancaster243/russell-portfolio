@@ -144,12 +144,12 @@ export default function SkillsDistributionChart({ data }: SkillsDistributionChar
               Skills: <strong>${d.count}</strong>
             </div>
             <div style="font-size: 12px; color: hsl(var(--muted-foreground)); margin-top: 4px;">
-              ${d.category === 'Data Science' ? 'Core analytical skills' :
-                d.category === 'ML/AI' ? 'Machine learning & AI tools' :
-                d.category === 'Data Engineering' ? 'Infrastructure & pipelines' :
-                d.category === 'Programming' ? 'Languages & frameworks' :
-                d.category === 'Visualization' ? 'Data presentation tools' :
-                'NLP, computer vision & advanced techniques'}
+              ${d.category === 'Programming' ? 'Languages & development tools' :
+                d.category === 'Machine Learning' ? 'ML algorithms & frameworks' :
+                d.category === 'Data Engineering' ? 'Infrastructure & data pipelines' :
+                d.category === 'Data Analysis' ? 'Statistical analysis & exploration' :
+                d.category === 'BI & Visualization' ? 'Dashboards & visual storytelling' :
+                'Statistical modeling & forecasting'}
             </div>
           `);
       })

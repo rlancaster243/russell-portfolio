@@ -195,24 +195,25 @@ export default function Home() {
   ];
 
   const skills = {
-    "Programming & Tools": ["Python", "R", "SQL", "Jupyter", "Git", "GitHub"],
-    "Machine Learning": ["XGBoost", "Random Forest", "Deep Learning", "PyTorch", "scikit-learn", "TensorFlow"],
-    "Data Engineering": ["Databricks", "Azure", "AWS", "Big Data", "ETL Pipelines", "Data Warehousing"],
-    "Data Analysis": ["Pandas", "NumPy", "Statistical Analysis", "A/B Testing", "Hypothesis Testing", "Time Series"],
-    "Visualization": ["Plotly", "Streamlit", "Tableau", "Power BI", "Matplotlib", "Seaborn"],
-    "Specialized Skills": ["NLP", "Computer Vision", "Predictive Modeling", "Data Mining", "Feature Engineering", "Model Deployment"]
+    "Programming & Tools": ["Python", "R", "SQL", "JavaScript", "Git", "Bash/Shell"],
+    "Machine Learning": ["XGBoost", "Random Forest", "scikit-learn", "PyTorch", "TensorFlow", "Model Evaluation"],
+    "Data Engineering": ["Databricks", "Azure", "AWS", "PostgreSQL", "ETL Pipelines", "Data Warehousing"],
+    "Data Analysis": ["Pandas", "NumPy", "Statistical Analysis", "Time Series Forecasting", "A/B Testing", "SciPy"],
+    "BI & Visualization": ["Power BI", "Tableau", "Streamlit", "Plotly", "D3.js", "Matplotlib"],
+    "Modeling & Analytics": ["Statistical Modeling", "Risk Analysis", "Optimization", "Scenario Analysis", "Predictive Modeling", "Forecasting"]
   };
 
   // Data for D3.js charts
   const skillsRadarData = [
-    { skill: "Python", level: 95 },
-    { skill: "Machine Learning", level: 90 },
-    { skill: "Data Analysis", level: 92 },
-    { skill: "SQL", level: 85 },
-    { skill: "Data Viz", level: 88 },
-    { skill: "Cloud (AWS/Azure)", level: 75 },
-    { skill: "NLP", level: 82 },
-    { skill: "Statistics", level: 87 }
+    { skill: "Programming Fundamentals", level: 90 },
+    { skill: "Data Analysis & Statistics", level: 90 },
+    { skill: "ML & Predictive Modeling", level: 86 },
+    { skill: "Data Viz & BI", level: 89 },
+    { skill: "Databases & SQL", level: 86 },
+    { skill: "Statistical Modeling", level: 84 },
+    { skill: "Cloud & DevOps", level: 72 },
+    { skill: "Web & App Development", level: 78 },
+    { skill: "Systems & IT", level: 80 }
   ];
 
   const certificationsTimelineData = [
@@ -222,12 +223,12 @@ export default function Home() {
   ];
 
   const skillsDistributionData = [
-    { category: "Data Science", count: 6 },
-    { category: "ML/AI", count: 6 },
-    { category: "Data Engineering", count: 6 },
     { category: "Programming", count: 6 },
-    { category: "Visualization", count: 6 },
-    { category: "Specialized", count: 6 }
+    { category: "Machine Learning", count: 6 },
+    { category: "Data Engineering", count: 6 },
+    { category: "Data Analysis", count: 6 },
+    { category: "BI & Visualization", count: 6 },
+    { category: "Modeling & Analytics", count: 6 }
   ];
 
   const scrollToSection = (id: string) => {
@@ -429,15 +430,15 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Intensive online program focused on quantitative finance, data science, and risk management. Combines financial theory with practical training in Python, SQL, and machine learning tools.
+                  Intensive online program focused on data science, statistical modeling, and risk analysis. Combines analytical theory with practical training in Python, SQL, and machine learning tools.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="outline">Machine Learning</Badge>
-                  <Badge variant="outline">Quantitative Finance</Badge>
+                  <Badge variant="outline">Statistical Modeling</Badge>
                   <Badge variant="outline">Python</Badge>
-                  <Badge variant="outline">Risk Management</Badge>
-                  <Badge variant="outline">Derivatives</Badge>
-                  <Badge variant="outline">Portfolio Management</Badge>
+                  <Badge variant="outline">Risk Analysis</Badge>
+                  <Badge variant="outline">Forecasting</Badge>
+                  <Badge variant="outline">Optimization</Badge>
                 </div>
               </CardContent>
             </Card>

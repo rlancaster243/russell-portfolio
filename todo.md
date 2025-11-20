@@ -58,4 +58,18 @@
 - [x] Refocus projects on Data Science and Data Analysis (remove/reduce quantitative finance focus)
 - [x] Refocus certifications on Data Science and Data Analysis (remove/reduce quantitative finance focus)
 - [x] Test all changes in browser
+- [x] Deploy updates to GitHub
+
+## De-Quant Portfolio Updates
+
+- [x] Update radar chart with new 9 skills categories from specifications
+- [x] Update radar chart values to match provided strengths
+- [x] Remove all quantitative finance terminology from skills section
+- [x] Update detailed skills based on provided table (remove derivatives, portfolio optimization, trading)
+- [x] Reframe time series and optimization skills as general analytics
+- [x] Update About section to remove "quantitative" references
+- [x] Change "5+ years" to "3+ years" and remove finance language
+- [x] Update hero description to remove financial modeling references
+- [x] Ensure no project descriptions mention trading or markets
+- [x] Test all changes in browser
 - [ ] Deploy updates to GitHub
