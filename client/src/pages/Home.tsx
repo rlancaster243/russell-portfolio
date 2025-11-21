@@ -17,7 +17,7 @@ import {
   BarChart3
 } from "lucide-react";
 import SkillsRadarChart from "@/components/SkillsRadarChart";
-import SkillsDistributionChart from "@/components/SkillsDistributionChart";
+
 
 
 export default function Home() {
@@ -200,14 +200,7 @@ export default function Home() {
 
 
 
-  const skillsDistributionData = [
-    { category: "Programming", count: 6 },
-    { category: "Machine Learning", count: 6 },
-    { category: "Data Engineering", count: 6 },
-    { category: "Data Analysis", count: 6 },
-    { category: "BI & Visualization", count: 6 },
-    { category: "Modeling & Analytics", count: 6 }
-  ];
+
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -507,29 +500,12 @@ export default function Home() {
           <div className="space-y-12">
             {/* Skills Proficiency Radar Chart */}
             <Card className="card-hover">
-              <CardHeader>
-                <CardTitle className="text-2xl text-center">Technical Proficiency Overview</CardTitle>
-                <CardDescription className="text-center">
-                  Multi-dimensional assessment of core technical competencies
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
+              <CardContent className="pt-6">
                 <SkillsRadarChart data={skillsRadarData} />
               </CardContent>
             </Card>
 
-            {/* Skills Distribution */}
-            <Card className="card-hover">
-              <CardHeader>
-                <CardTitle className="text-2xl text-center">Skills Distribution by Category</CardTitle>
-                <CardDescription className="text-center">
-                  Breadth of expertise across data science domains
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <SkillsDistributionChart data={skillsDistributionData} />
-              </CardContent>
-            </Card>
+
           </div>
         </div>
       </section>

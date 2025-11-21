@@ -155,5 +155,14 @@
 
 - [x] Check vercel.json configuration
 - [x] Ensure output directory is set to dist/public
-- [ ] Push to GitHub
+- [x] Push to GitHub
 - [ ] Verify Vercel deployment
+
+## Remove Bar Chart and Fix Radar Chart Font Colors
+
+- [x] Remove Skills Distribution bar chart from Home.tsx
+- [x] Remove SkillsDistributionChart import and data
+- [x] Cancel radar chart font color changes (not needed)
+- [x] Remove duplicate "Technical Proficiency Overview" title
+- [x] Test changes
+- [ ] Push to GitHub
