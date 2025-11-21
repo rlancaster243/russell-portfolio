@@ -165,4 +165,11 @@
 - [x] Cancel radar chart font color changes (not needed)
 - [x] Remove duplicate "Technical Proficiency Overview" title
 - [x] Test changes
+- [x] Push to GitHub
+
+## Change Radar Chart Text to White
+
+- [x] Change title "Technical Proficiency Overview" to white
+- [x] Change subtitle "Comprehensive skill assessment across key domains" to white
+- [x] Test changes
 - [ ] Push to GitHub

@@ -33,7 +33,7 @@ export default function SkillsRadarChart({ data }: SkillsRadarChartProps) {
       .attr('text-anchor', 'middle')
       .style('font-size', '18px')
       .style('font-weight', '700')
-      .style('fill', 'hsl(var(--foreground))')
+      .style('fill', '#ffffff')
       .text('Technical Proficiency Overview');
 
     // Add subtitle
@@ -42,7 +42,7 @@ export default function SkillsRadarChart({ data }: SkillsRadarChartProps) {
       .attr('y', 50)
       .attr('text-anchor', 'middle')
       .style('font-size', '13px')
-      .style('fill', 'hsl(var(--muted-foreground))')
+      .style('fill', '#ffffff')
       .text('Comprehensive skill assessment across key domains');
 
     const g = svg
